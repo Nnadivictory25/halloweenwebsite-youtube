@@ -86,5 +86,31 @@
         &:hover {
             background-color: var(--first-color-alt);
         }
+
+        &__icon {
+            font-size: 1.25rem;
+        }
+
+        &--link {
+            color: var(--title-color);
+        }
+
+        &-flex {
+            display: inline-flex;
+            align-items: center;
+            column-gap: .5rem;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+        margin-top: var(--mb-1);
+    }
+
+    .swiper-pagination-bullet {
+        width: rem(5);
+        height: rem(5);
+        background-color: var(--title-color);
+        opacity: 1;
     }
 }
