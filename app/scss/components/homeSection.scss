@@ -1,0 +1,90 @@
+@use '../util/breakpoints.scss' as *;
+@use '../util/functions.scss' as *;
+@use '../util/mixins.scss' as *;
+
+
+.home {
+
+    &__content {
+        row-gap: 1rem;
+    }
+
+    &__group  {
+        display: grid;
+        position: relative;
+        padding: 2rem;
+    }
+
+    &__img {
+        height: rem(250);
+        justify-self: center;
+    }
+
+    &__indicator {
+        width: rem(8);
+        height: rem(8);
+        background-color: var(--title-color);
+        position: absolute;
+        border-radius: 50%;
+        top: 7rem;
+        right: 2rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: rem(48);
+            background-color: var(--title-color);
+            top: -3rem;
+            right: 45%;
+        }
+    }
+
+    &__details-img {
+        position: absolute;
+        right: .5rem;
+        color: #fff;
+
+        h4 {
+            font-weight: 700;
+        }
+    }
+
+    &__details-title,
+    &__details-subtitle {
+        display: block;
+        font-size: var(--small-font-size);
+        text-align: right;
+    }
+
+    &__subtitle {
+        font-size: var(--h3-font-size);
+        text-transform: uppercase;
+        margin-bottom: var(--mb-1);
+    }
+
+    &__title {
+        font-size: var(--biggest-font-size);
+        font-weight: var(--font-black);
+        line-height: 109%;
+        margin-bottom: var(--mb-1);
+    }
+
+    &__description {
+        margin-bottom: var(--mb-1);
+    }
+
+    .button {
+        display: inline-block;
+        background-color: var(--first-color);
+        color: var(--title-color);
+        padding: 1rem 1.75rem;
+        border-radius: .5rem;
+        font-weight: var(--font-medium);
+        transition: .3s;
+
+        &:hover {
+            background-color: var(--first-color-alt);
+        }
+    }
+}
